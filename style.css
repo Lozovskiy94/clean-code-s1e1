@@ -41,7 +41,8 @@ body {
   margin: 0;
   padding: 0px;
 }
-.complete__item, .incomplete__item {
+.complete__item, 
+.incomplete__item {
   list-style: none;
 }
 .input,.button{
@@ -96,7 +97,8 @@ body {
 }
 
 /* Task list */
-.complete__item, .incomplete__item {
+.complete__item, 
+.incomplete__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -104,14 +106,16 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.complete__item, .incomplete__item > * {
+.complete__item, 
+.incomplete__item > * {
   vertical-align: middle;
 }
 
 .input-checkbox {
   margin: 0 10px;
 }
-.incomplete__item__label, .complete__item__lavel {
+.incomplete__item__label,
+.complete__item__lavel {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
