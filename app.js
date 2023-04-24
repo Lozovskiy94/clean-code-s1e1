@@ -18,7 +18,7 @@ var completedTasksHolder=document.getElementById("main-content__task__complete")
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
-
+    listItem.classList.add("incomplete__item")
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
@@ -27,24 +27,30 @@ var createNewTaskElement=function(taskString){
     var editInput=document.createElement("input");//text
     //button.edit
     var editButton=document.createElement("button");//edit button
-
+    
     //button.delete
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
     label.className='main-content__task';
+    label.classList.add("label")
+    label.classList.add("incomplete__item__label")
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.classList.add("input-checkbox")
     editInput.type="text";
     editInput.className="main-content__task";
+    editInput.classList.add("input-text")
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="main-content__task__edit";
-
-    deleteButton.className="main-content__task__delete";
+    editButton.classList.add("button")
+    deleteButton.className="main-content__task__delete"
+    deleteButton.classList.add("button")
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.classList.add("main-content__task__delete__img")
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -85,7 +91,7 @@ var editTask=function(){
     var editInput=listItem.querySelector('.input-text');
     var label=listItem.querySelector(".label");
     var editBtn=listItem.querySelector(".main-content__task__edit");
-    var containsClass=listItem.classList.contains("editMode");
+    var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -147,7 +153,7 @@ var ajaxRequest=function(){
 
 
 //Set the click handler to the addTask function.
-addButton.onclick=addTask;
+// addButton.onclick=addTask;
 addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
 
