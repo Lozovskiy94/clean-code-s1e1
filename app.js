@@ -128,6 +128,8 @@ var taskCompleted=function(){
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
     completedTasksHolder.appendChild(listItem);
+    listItem.classList.add('complete__item')
+    listItem.childNodes[1].classList.add('complete__item__lavel')
     bindTaskEvents(listItem, taskIncomplete);
 
 }
