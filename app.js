@@ -128,8 +128,7 @@ var taskCompleted=function(){
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
     completedTasksHolder.appendChild(listItem);
-    listItem.classList.add('complete__item')
-    listItem.childNodes[1].classList.add('complete__item__lavel')
+    listItem.classList = 'complete__item'
     bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -142,6 +141,7 @@ var taskIncomplete=function(){
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
+    listItem.classList = 'incomplete__item'
     bindTaskEvents(listItem,taskCompleted);
 }
 
