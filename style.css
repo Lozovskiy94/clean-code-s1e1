@@ -134,7 +134,7 @@ li > input[type="text"] {
 }
 
 /* Completed */
-.complete__item__lavel {
+.complete__item label{
   text-decoration: line-through;
   color: #888;
 }
